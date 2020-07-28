@@ -4,7 +4,7 @@
 
 #### ---Implimentation Note:---
 The way I tried to answer in the light of the question,
-- Question 1: Solved through Java platform within NetBeans IDE project template.
-- Question 2:
-  a) Necessary explanations are described in a PDF document.
-  b) Solved prototype using differents design pattern through NetBeans IDE project template.
+1. : Solved through Java platform within NetBeans IDE project template.
+2. :
+  - a) Necessary explanations are described in a PDF document.
+  - b) Solved prototype using differents design pattern through NetBeans IDE project template.
