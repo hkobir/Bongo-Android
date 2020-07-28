@@ -1,2 +1,2 @@
 # Bongo-Android
-Tag: Data Structure, OOP, Java, Media-Controller (Android Application)
+Tag: Data Structure, OOP, Java(Design Pattern), Media-Controller(Android Application)
