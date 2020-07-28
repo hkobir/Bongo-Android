@@ -9,8 +9,8 @@ The way I tried to answer in the light of the question,
   - Solved through Java platform within NetBeans IDE project template.
   
 2. Design Pattern
-  a. Necessary explanations are described in a PDF document.
-  b. Solved prototype using differents design pattern through NetBeans IDE project template.
+  - a) Necessary explanations are described in a PDF document.
+  - b) Solved prototype using differents design pattern through NetBeans IDE project template.
   
 3. Video Player Application
   - Provided solution within two directories, one is containing project source code and another directory contained report explanation of design pattern of application through a pdf document. 
