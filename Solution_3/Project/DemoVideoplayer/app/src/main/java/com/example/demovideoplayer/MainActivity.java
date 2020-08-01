@@ -38,30 +38,30 @@ public class MainActivity extends AppCompatActivity {
     ProgressBar progressBar;
     ImageView btn_fullscreen;
     SimpleExoPlayer simpleExoPlayer;
-    boolean flag=false;
+    boolean flag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        playerView=findViewById(R.id.playerid);
-        progressBar=findViewById(R.id.progressbar_id);
-        btn_fullscreen=findViewById(R.id.bt_full_scrn);
+        playerView = findViewById(R.id.playerid);
+        progressBar = findViewById(R.id.progressbar_id);
+        btn_fullscreen = findViewById(R.id.bt_full_scrn);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        Uri videoUrl=Uri.parse("https://imgur.com/Am9tcvl.mp4");
+        Uri videoUrl = Uri.parse("https://imgur.com/Am9tcvl.mp4");
 
 
-        LoadControl loadControl= new DefaultLoadControl();
-        BandwidthMeter bandwidthMeter=new DefaultBandwidthMeter();
-        TrackSelector trackSelector=new DefaultTrackSelector(
+        LoadControl loadControl = new DefaultLoadControl();
+        BandwidthMeter bandwidthMeter = new DefaultBandwidthMeter();
+        TrackSelector trackSelector = new DefaultTrackSelector(
                 new AdaptiveTrackSelection.Factory(bandwidthMeter)
         );
-        simpleExoPlayer= ExoPlayerFactory.newSimpleInstance(MainActivity.this,trackSelector,loadControl);
-        DefaultHttpDataSourceFactory factory=new DefaultHttpDataSourceFactory("exo_player");
-        ExtractorsFactory extractorsFactory =new DefaultExtractorsFactory();
-        MediaSource mediaSource=new ExtractorMediaSource(videoUrl,factory,extractorsFactory,null,null);
+        simpleExoPlayer = ExoPlayerFactory.newSimpleInstance(MainActivity.this,trackSelector,loadControl);
+        DefaultHttpDataSourceFactory factory = new DefaultHttpDataSourceFactory("exo_player");
+        ExtractorsFactory extractorsFactory = new DefaultExtractorsFactory();
+        MediaSource mediaSource = new ExtractorMediaSource(videoUrl,factory,extractorsFactory,null,null);
         playerView.setPlayer(simpleExoPlayer);
         playerView.setKeepScreenOn(true);
         simpleExoPlayer.prepare(mediaSource);
@@ -84,11 +84,11 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPlayerStateChanged(boolean playWhenReady, int playbackState) {
-                if(playbackState==Player.STATE_BUFFERING)
+                if(playbackState == Player.STATE_BUFFERING)
                 {
                     progressBar.setVisibility(View.VISIBLE);
                 }
-                else if(playbackState==Player.STATE_READY)
+                else if(playbackState == Player.STATE_READY)
                 {
                     progressBar.setVisibility(View.GONE);
                 }
