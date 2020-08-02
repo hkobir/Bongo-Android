@@ -1,5 +1,5 @@
 # Bongo-Android
-###### **Tag:** Data Structure, OOP, Java(Design Pattern), Video PLayer(Android Application)
+###### **Tag:** Data Structure, OOP, Java(Design Pattern), Video Player(Android Application)
 ###### **IDE/Tool:** Netbean(solution 1 & 2), Android Studio(solution 3) 
 
 #### ---Implimentation Note:---
